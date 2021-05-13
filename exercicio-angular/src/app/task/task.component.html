@@ -1,0 +1,24 @@
+<div>
+  <label>Tarefa realizada:</label>
+  <input type="text" autofocus [(ngModel)]="userTask" />
+  <label>Tempo gasto:</label>
+  <input type="text" [(ngModel)]="userTimeSpent" />
+  <button (click)="saveTask()">Salvar</button>
+</div>
+<div>
+  <p>Lista de tarefas</p>
+  <ul>
+    <li *ngFor="let task of tasks">
+      <table>
+        <tr>
+          <td>Task:</td>
+          <td>Time Spent:</td>
+        </tr>
+        <tr>
+          <td>{{ task.description }}</td>
+          <td>{{ task.timeSpent }}</td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+</div>
